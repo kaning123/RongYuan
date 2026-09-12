@@ -8,8 +8,8 @@ def create_app(url_file = url.merge(url.MY_DIR, 'URL')):
     @app.route('/')
     def hello_world():
         return 'Hello, World!'
-    @app.route('/sample/', defaults={'subpath': ''})
-    @app.route('/sample/<path:subpath>')
+    @app.route('/simple/', defaults={'subpath': ''})
+    @app.route('/simple/<path:subpath>')
     def sample(subpath):
         query = flask.request.query_string.decode()
 
